@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-
+import TokenForm from './pages/TokenForm'
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
 import SignIn from './pages/Authentication/SignIn';
@@ -40,6 +40,15 @@ function App() {
             <>
               <PageTitle title="eCommerce Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
               <ECommerce />
+            </>
+          }
+        />
+            <Route
+          path="/createtoken"
+          element={
+            <>
+              <PageTitle title="create token | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <TokenForm/>
             </>
           }
         />
