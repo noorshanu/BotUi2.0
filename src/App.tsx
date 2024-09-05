@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import TokenForm from './pages/TokenForm'
+import TokenForm from './pages/TokenForm';
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
 import SignIn from './pages/Authentication/SignIn';
@@ -16,6 +16,12 @@ import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
 import Buttons from './pages/UiElements/Buttons';
 import DefaultLayout from './layout/DefaultLayout';
+import TokenVanity from './pages/TokenVanity';
+import RevokePermission from './pages/RevokePermission';
+import TokenIssuance from './pages/TokenIssuance';
+import TokenCloning from './pages/TokenCloaning';
+import FreezeAccount from './pages/FreezeAccount';
+import FreezeAccountUI from './pages/FreezeAccountUI';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -43,24 +49,73 @@ function App() {
             </>
           }
         />
-            <Route
+        <Route
           path="/createtoken"
           element={
             <>
               <PageTitle title="create token | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <TokenForm/>
+              <TokenForm />
             </>
           }
         />
         <Route
-          path="/calendar"
+          path="/token-vanity"
           element={
             <>
-              <PageTitle title="Calendar | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <Calendar />
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <TokenVanity />
             </>
           }
         />
+
+        <Route
+          path="/revoke-permission"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <RevokePermission />
+            </>
+          }
+        />
+
+<Route
+          path="/token-issuance"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+           <TokenIssuance/>
+            </>
+          }
+        />
+        <Route
+          path="/token-clone"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+          <TokenCloning/>
+            </>
+          }
+        />
+             <Route
+          path="/freeze-account"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+   <FreezeAccount/>
+            </>
+          }
+        />
+
+<Route
+          path="/auto-freeze"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+   <FreezeAccountUI/>
+            </>
+          }
+        />
+
         <Route
           path="/profile"
           element={
