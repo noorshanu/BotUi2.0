@@ -22,6 +22,7 @@ import TokenIssuance from './pages/TokenIssuance';
 import TokenCloning from './pages/TokenCloaning';
 import FreezeAccount from './pages/FreezeAccount';
 import FreezeAccountUI from './pages/FreezeAccountUI';
+import BurnToken from './pages/BurnToken';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -112,6 +113,16 @@ function App() {
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
    <FreezeAccountUI/>
+            </>
+          }
+        />
+
+<Route
+          path="/burn-token"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+   <BurnToken/>
             </>
           }
         />
