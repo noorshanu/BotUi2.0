@@ -23,6 +23,9 @@ import TokenCloning from './pages/TokenCloaning';
 import FreezeAccount from './pages/FreezeAccount';
 import FreezeAccountUI from './pages/FreezeAccountUI';
 import BurnToken from './pages/BurnToken';
+import UnfreezeTabs from './pages/UnfreezeTabs';
+import TokenUpdate from './pages/TokenUpdate';
+import CreateMarketForm from './pages/Liquidity/CreateMarketForm';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -116,13 +119,41 @@ function App() {
             </>
           }
         />
-
+<Route
+          path="/unfreeze-token"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+   <UnfreezeTabs/>
+            </>
+          }
+        />
 <Route
           path="/burn-token"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
    <BurnToken/>
+            </>
+          }
+        />
+
+<Route
+          path="/token-update"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+   <TokenUpdate/>
+            </>
+          }
+        />
+
+<Route
+          path="/openid-market"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+ <CreateMarketForm/>
             </>
           }
         />
