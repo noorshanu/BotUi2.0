@@ -26,6 +26,10 @@ import BurnToken from './pages/BurnToken';
 import UnfreezeTabs from './pages/UnfreezeTabs';
 import TokenUpdate from './pages/TokenUpdate';
 import CreateMarketForm from './pages/Liquidity/CreateMarketForm';
+import AddLiquidityForm from './pages/Liquidity/AddLiquidityForm';
+import RemoveLiquidity from './pages/Liquidity/RemoveLiquidity';
+import BurnLiquidity from './pages/Liquidity/BurnLiquidity';
+import CreateLiquidityAndBuy from './pages/Liquidity/CreateLiquidyAndBuy';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -82,12 +86,12 @@ function App() {
           }
         />
 
-<Route
+        <Route
           path="/token-issuance"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-           <TokenIssuance/>
+              <TokenIssuance />
             </>
           }
         />
@@ -96,68 +100,104 @@ function App() {
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-          <TokenCloning/>
+              <TokenCloning />
             </>
           }
         />
-             <Route
+        <Route
           path="/freeze-account"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-   <FreezeAccount/>
+              <FreezeAccount />
             </>
           }
         />
 
-<Route
+        <Route
           path="/auto-freeze"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-   <FreezeAccountUI/>
+              <FreezeAccountUI />
             </>
           }
         />
-<Route
+        <Route
           path="/unfreeze-token"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-   <UnfreezeTabs/>
+              <UnfreezeTabs />
             </>
           }
         />
-<Route
+        <Route
           path="/burn-token"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-   <BurnToken/>
+              <BurnToken />
             </>
           }
         />
 
-<Route
+        <Route
           path="/token-update"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-   <TokenUpdate/>
+              <TokenUpdate />
+            </>
+          }
+        />
+
+        <Route
+          path="/openid-market"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <CreateMarketForm />
+            </>
+          }
+        />
+             <Route
+          path="/add-liquidity"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <AddLiquidityForm/>
+            </>
+          }
+        />
+               <Route
+          path="/remove-liquidity"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <RemoveLiquidity/>
             </>
           }
         />
 
 <Route
-          path="/openid-market"
+          path="/burn-liquidity"
           element={
             <>
               <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
- <CreateMarketForm/>
+             <BurnLiquidity/>
             </>
           }
         />
-
+        <Route
+          path="/create-liquidity-buy"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+             <CreateLiquidityAndBuy/>
+            </>
+          }
+        />
         <Route
           path="/profile"
           element={
