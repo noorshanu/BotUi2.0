@@ -30,6 +30,9 @@ import AddLiquidityForm from './pages/Liquidity/AddLiquidityForm';
 import RemoveLiquidity from './pages/Liquidity/RemoveLiquidity';
 import BurnLiquidity from './pages/Liquidity/BurnLiquidity';
 import CreateLiquidityAndBuy from './pages/Liquidity/CreateLiquidyAndBuy';
+import BatchGenerateWallets from './pages/Wallet/BatchGenerateWallets';
+import SolanaBatchSend from './pages/Wallet/SolanaBatchSend';
+import TokenBatchCollection from './pages/Wallet/TokenBatchCollection';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -198,6 +201,36 @@ function App() {
             </>
           }
         />
+             <Route
+          path="/generate-wallet"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+             <BatchGenerateWallets/>
+            </>
+          }
+        />
+
+<Route
+          path="/multi-sender"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+             <SolanaBatchSend/>
+            </>
+          }
+        />
+
+<Route
+          path="/token-collection"
+          element={
+            <>
+              <PageTitle title="Token Vanity | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+           <TokenBatchCollection/>
+            </>
+          }
+        />
+
         <Route
           path="/profile"
           element={

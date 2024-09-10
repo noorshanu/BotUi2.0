@@ -554,38 +554,38 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
                           <li>
                             <NavLink
-                              to="/openid-market"
+                              to="/generate-wallet"
                               className={({ isActive }) =>
                                 'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                 (isActive && '!text-white')
                               }
                             >
                               <IoIosAddCircleOutline className=" text-white" />{' '}
-                              Create OpenBookID
+                              Wallet Generation
                             </NavLink>
                           </li>
                           <li>
                             <NavLink
-                              to="/add-liquidity"
+                              to="/multi-sender"
                               className={({ isActive }) =>
                                 'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                 (isActive && '!text-white')
                               }
                             >
                               <IoDiamondOutline className="text-white" />
-                              Create Liquidity
+                            Multi Sender
                             </NavLink>
                           </li>
 
                           <li>
                             <NavLink
-                              to="/remove-liquidity"
+                              to="/token-collection"
                               className={({ isActive }) =>
                                 'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
                                 (isActive && '!text-white')
                               }
                             >
-                              Remove Liquidity
+                              Batch Collection
                             </NavLink>
                           </li>
 
